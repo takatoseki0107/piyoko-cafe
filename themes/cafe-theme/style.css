@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/*
+Theme Name: Piyoko Cafe
+Theme URI: https://example.com/
+Author: takato
+Description: 山の古民家でたまご料理を提供する「ぴよこcafe」のオリジナルテーマ
+Version: 1.0.0
+License: GNU General Public License v2 or later
+Text Domain: cafe-theme
+*/
+body {
+	background: #FFFDF7;
+	color: #3E2C1C;
+	font-family: sans-serif;
+}

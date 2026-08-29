@@ -1,0 +1,425 @@
+@charset "UTF-8";
+
+/* =========================================
+   1. 変数定義
+   ========================================= */
+:root {
+  /* 色 */
+  --color-primary: #F2B705;
+  --color-base:    #FFFDF7;
+  --color-wood:    #8A6240;
+  --color-text:    #3E2C1C;
+  --color-white:   #FFFFFF;
+  --color-gray:    #7A6A5C;
+
+  /* 余白 */
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  32px;
+  --space-xl:  64px;
+  --space-2xl: 120px;
+
+  /* フォント */
+  --font-heading: "Zen Maru Gothic", sans-serif;
+  --font-body:    "Noto Sans JP", sans-serif;
+
+  /* その他 */
+  --radius: 16px;
+  --max-width: 1120px;
+}
+
+/* =========================================
+   2. リセット
+
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, p, ul, ol, li, figure, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   3. ベース
+   ========================================= */
+body {
+
+  background: var(--color-base);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: 1.4;
+}
+
+/* =========================================
+   4. 汎用パーツ
+   ========================================= */
+.container {
+  width: min(100% - 40px, var(--max-width));
+  margin-inline: auto;
+}
+/* =========================================
+   5. ヘッダー
+   ========================================= */
+.header {
+  background: var(--color-white);
+  padding-block: var(--space-md);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-wood);
+}
+
+.nav__list {
+  display: flex;
+  gap: var(--space-lg);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav__list a:hover {
+
+  color: var(--color-primary);
+}
+
+/* =========================================
+   6. ヒーロー
+   ========================================= */
+.hero {
+  padding-block: var(--space-2xl);
+  text-align: center;
+}
+
+.hero__lead {
+  font-family: var(--font-heading);
+  color: var(--color-wood);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.hero__title {
+  font-size: clamp(40px, 8vw, 72px);
+  margin-block: var(--space-md);
+}
+
+.hero__text {
+  color: var(--color-gray);
+  margin-bottom: var(--space-lg);
+}
+
+/* =========================================
+   7. ボタン
+   ========================================= */
+.button {
+
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-text);
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 999px;
+  transition: opacity 0.3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+/* =========================================
+   8. セクション共通
+   ========================================= */
+.section__label {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.section__title {
+  font-size: clamp(24px, 4vw, 36px);
+  text-align: center;
+  margin-block: var(--space-sm) var(--space-xl);
+}
+
+/* =========================================
+   9. コンセプト
+   ========================================= */
+.concept {
+  padding-block: var(--space-2xl);
+  background: var(--color-white);
+}
+
+.concept__text {
+  text-align: center;
+  color: var(--color-gray);
+  margin-bottom: var(--space-lg);
+}
+/* =========================================
+   10. メニュー
+   ========================================= */
+.menu {
+  padding-block: var(--space-2xl);
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card__image {
+  background: var(--color-primary);
+  aspect-ratio: 4 / 3;
+  display: grid;
+  place-items: center;
+  font-size: 72px;
+}
+
+.card__body {
+  padding: var(--space-lg);
+}
+
+.card__title {
+  font-size: 20px;
+  margin-bottom: var(--space-sm);
+}
+
+.card__text {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-bottom: var(--space-md);
+}
+
+.card__price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-wood);
+}
+
+.menu__more {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+/* =========================================
+   11. お知らせ
+   ========================================= */
+.news {
+  padding-block: var(--space-2xl);
+  background: var(--color-white);
+}
+
+.news__list {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.news__item {
+  border-bottom: 1px solid #EDE4D8;
+}
+
+.news__item a {
+  display: flex;
+  gap: var(--space-lg);
+  padding-block: var(--space-md);
+  transition: color 0.3s;
+}
+
+.news__item a:hover {
+  color: var(--color-primary);
+}
+
+.news__date {
+  color: var(--color-wood);
+  font-size: 14px;
+  flex-shrink: 0;
+
+}
+
+.news__title {
+  font-size: 15px;
+}
+/* =========================================
+   12. アクセス
+   ========================================= */
+.access {
+  padding-block: var(--space-2xl);
+}
+
+.access__list {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.access__row {
+  display: flex;
+  gap: var(--space-lg);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid #EDE4D8;
+}
+
+.access__row dt {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-wood);
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.access__row dd {
+  margin: 0;
+}
+
+/* =========================================
+
+   13. フッター
+   ========================================= */
+.footer {
+  background: var(--color-wood);
+  color: var(--color-white);
+  padding-block: var(--space-xl);
+  text-align: center;
+}
+
+.footer__logo {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer__text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-block: var(--space-sm) var(--space-lg);
+}
+
+.footer__copyright {
+  font-size: 12px;
+  opacity: 0.6;
+}
+/* =========================================
+   14. ハンバーガーボタン
+   ========================================= */
+.hamburger {
+  display: none;
+  width: 32px;
+  height: 24px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 30;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-wood);
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 11px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+.hamburger.is-open span:nth-child(1) {
+  top: 11px;
+  transform: rotate(45deg);
+
+}
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open span:nth-child(3) {
+  bottom: 11px;
+  transform: rotate(-45deg);
+}
+
+/* =========================================
+   15. スマホ対応
+   ========================================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 0;
+    background: var(--color-base);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 20;
+  }
+
+  .nav.is-open {
+    opacity: 1;
+    visibility: visible;
+
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: var(--space-lg);
+    font-size: 18px;
+    text-align: center;
+  }
+}
+body.is-fixed {
+  overflow: hidden;
+}
