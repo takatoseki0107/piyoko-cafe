@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>お知らせ｜ぴよこcafe</title>
+    <meta
+      name="description"
+      content="ぴよこcafeからのお知らせ一覧。季節限定メニューや営業日の変更などをお伝えします。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="header__logo" href="index.html">ぴよこcafe</a>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav__list">
+            <li><a href="about.html">お店について</a></li>
+            <li><a href="menu.html">メニュー</a></li>
+            <li><a class="is-current" href="news.html">お知らせ</a></li>
+            <li><a href="access.html">アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <p class="section__label">NEWS</p>
+          <h1 class="page-header__title">お知らせ</h1>
+          <p class="page-header__text">
+            季節のメニューや、営業日についてのご案内です。
+          </p>
+        </div>
+      </section>
+
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="index.html">ホーム</a></li>
+            <li class="breadcrumb__item" aria-current="page">お知らせ</li>
+          </ol>
+        </div>
+      </nav>
+
+      <section class="news-page">
+        <div class="container">
+          <ul class="news-archive">
+            <li class="news-archive__item">
+              <a class="news-archive__link" href="#">
+                <div class="news-archive__meta">
+                  <time class="news-archive__date" datetime="2026-08-20"
+                    >2026.08.20</time
+                  >
+                  <span class="news-archive__category">メニュー</span>
+                </div>
+                <h2 class="news-archive__title">
+                  夏季限定「レモンプリン」はじめました
+                </h2>
+                <p class="news-archive__text">
+                  となりの畑で採れたレモンを使った、さっぱり味のプリンです。9月末までの限定でお出しします。
+                </p>
+              </a>
+            </li>
+
+            <li class="news-archive__item">
+              <a class="news-archive__link" href="#">
+                <div class="news-archive__meta">
+                  <time class="news-archive__date" datetime="2026-08-05"
+                    >2026.08.05</time
+                  >
+                  <span class="news-archive__category">営業</span>
+                </div>
+                <h2 class="news-archive__title">
+                  8月の営業日についてのお知らせ
+                </h2>
+
+                <p class="news-archive__text">
+                  8月13日から16日まで、お盆休みをいただきます。ご不便をおかけしますが、よろしくお願いいたします。
+                </p>
+              </a>
+            </li>
+
+            <li class="news-archive__item">
+              <a class="news-archive__link" href="#">
+                <div class="news-archive__meta">
+                  <time class="news-archive__date" datetime="2026-07-18"
+                    >2026.07.18</time
+                  >
+                  <span class="news-archive__category">お店</span>
+                </div>
+                <h2 class="news-archive__title">
+                  テラス席が使えるようになりました
+                </h2>
+                <p class="news-archive__text">
+                  裏庭を整えて、4席ぶんのテラス席をつくりました。天気のいい日はぜひ外でどうぞ。
+                </p>
+              </a>
+            </li>
+
+            <li class="news-archive__item">
+              <a class="news-archive__link" href="#">
+                <div class="news-archive__meta">
+                  <time class="news-archive__date" datetime="2026-06-30"
+                    >2026.06.30</time
+                  >
+                  <span class="news-archive__category">メニュー</span>
+                </div>
+                <h2 class="news-archive__title">
+                  「ぴよこモーニングプレート」をはじめます
+                </h2>
+                <p class="news-archive__text">
+                  9:00から11:00までの限定メニューです。トースト、目玉焼き、サラダにドリンクが付きます。
+                </p>
+              </a>
+            </li>
+
+            <li class="news-archive__item">
+              <a class="news-archive__link" href="#">
+                <div class="news-archive__meta">
+                  <time class="news-archive__date" datetime="2026-06-02"
+                    >2026.06.02</time
+                  >
+                  <span class="news-archive__category">お店</span>
+                </div>
+                <h2 class="news-archive__title">駐車場を2台ぶん広げました</h2>
+                <p class="news-archive__text">
+                  これまで3台でしたが、5台まで停められるようになりました。道が細いのでお気をつけてお越しください。
+                </p>
+              </a>
+            </li>
+
+            <li class="news-archive__item">
+              <a class="news-archive__link" href="#">
+                <div class="news-archive__meta">
+                  <time class="news-archive__date" datetime="2026-05-15"
+                    >2026.05.15</time
+                  >
+                  <span class="news-archive__category">お店</span>
+                </div>
+                <h2 class="news-archive__title">ぴよこcafeをはじめました</h2>
+
+                <p class="news-archive__text">
+                  築80年の古民家を改装して、たまご料理のカフェをひらきました。どうぞよろしくお願いします。
+                </p>
+              </a>
+            </li>
+          </ul>
+
+          <nav class="pagination" aria-label="ページ送り">
+            <ul class="pagination__list">
+              <li><span class="pagination__item is-current">1</span></li>
+              <li><a class="pagination__item" href="#">2</a></li>
+              <li><a class="pagination__item" href="#">3</a></li>
+              <li><a class="pagination__item" href="#">次へ</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__logo">ぴよこcafe</p>
+        <p class="footer__text">山の古民家で、たまご料理を。</p>
+        <p class="footer__copyright">&copy; 2026 piyoko cafe</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.getElementById("nav");
+
+      const toggleNav = () => {
+        hamburger.classList.toggle("is-open");
+        nav.classList.toggle("is-open");
+        document.body.classList.toggle("is-fixed");
+        const isOpen = hamburger.classList.contains("is-open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+      };
+
+      hamburger.addEventListener("click", toggleNav);
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (nav.classList.contains("is-open")) {
+            toggleNav();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
