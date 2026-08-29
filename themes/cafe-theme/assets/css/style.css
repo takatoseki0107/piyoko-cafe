@@ -1,0 +1,879 @@
+@charset "UTF-8";
+
+/* =========================================
+   1. 変数定義
+   ========================================= */
+:root {
+  /* 色 */
+  --color-primary: #F2B705;
+  --color-base:    #FFFDF7;
+  --color-wood:    #8A6240;
+  --color-text:    #3E2C1C;
+  --color-white:   #FFFFFF;
+  --color-gray:    #7A6A5C;
+
+  /* 余白 */
+  --space-sm:  8px;
+  --space-md:  16px;
+  --space-lg:  32px;
+  --space-xl:  64px;
+  --space-2xl: 120px;
+
+  /* フォント */
+  --font-heading: "Zen Maru Gothic", sans-serif;
+  --font-body:    "Noto Sans JP", sans-serif;
+
+  /* その他 */
+  --radius: 16px;
+  --max-width: 1120px;
+}
+
+/* =========================================
+   2. リセット
+
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, p, ul, ol, li, figure, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================================
+   3. ベース
+   ========================================= */
+body {
+
+  background: var(--color-base);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  line-height: 1.4;
+}
+
+/* =========================================
+   4. 汎用パーツ
+   ========================================= */
+.container {
+  width: min(100% - 40px, var(--max-width));
+  margin-inline: auto;
+}
+/* =========================================
+   5. ヘッダー
+   ========================================= */
+.header {
+  background: var(--color-white);
+  padding-block: var(--space-md);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-wood);
+}
+
+.nav__list {
+  display: flex;
+  gap: var(--space-lg);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav__list a:hover {
+
+  color: var(--color-primary);
+}
+
+/* =========================================
+   6. ヒーロー
+   ========================================= */
+.hero {
+  padding-block: var(--space-2xl);
+  text-align: center;
+}
+
+.hero__lead {
+  font-family: var(--font-heading);
+  color: var(--color-wood);
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.hero__title {
+  font-size: clamp(40px, 8vw, 72px);
+  margin-block: var(--space-md);
+}
+
+.hero__text {
+  color: var(--color-gray);
+  margin-bottom: var(--space-lg);
+}
+
+/* =========================================
+   7. ボタン
+   ========================================= */
+.button {
+
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-text);
+  font-weight: 700;
+  padding: 14px 40px;
+  border-radius: 999px;
+  transition: opacity 0.3s;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+/* =========================================
+   8. セクション共通
+   ========================================= */
+.section__label {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.section__title {
+  font-size: clamp(24px, 4vw, 36px);
+  text-align: center;
+  margin-block: var(--space-sm) var(--space-xl);
+}
+
+/* =========================================
+   9. コンセプト
+   ========================================= */
+.concept {
+  padding-block: var(--space-2xl);
+  background: var(--color-white);
+}
+
+.concept__text {
+  text-align: center;
+  color: var(--color-gray);
+  margin-bottom: var(--space-lg);
+}
+/* =========================================
+   10. メニュー
+   ========================================= */
+.menu {
+  padding-block: var(--space-2xl);
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.card__body {
+  padding: var(--space-lg);
+}
+
+.card__title {
+  font-size: 20px;
+  margin-bottom: var(--space-sm);
+}
+
+.card__text {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-bottom: var(--space-md);
+}
+
+.card__price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-wood);
+}
+
+.menu__more {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
+/* =========================================
+   11. お知らせ
+   ========================================= */
+.news {
+  padding-block: var(--space-2xl);
+  background: var(--color-white);
+}
+
+.news__list {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.news__item {
+  border-bottom: 1px solid #EDE4D8;
+}
+
+.news__item a {
+  display: flex;
+  gap: var(--space-lg);
+  padding-block: var(--space-md);
+  transition: color 0.3s;
+}
+
+.news__item a:hover {
+  color: var(--color-primary);
+}
+
+.news__date {
+  color: var(--color-wood);
+  font-size: 14px;
+  flex-shrink: 0;
+
+}
+
+.news__title {
+  font-size: 15px;
+}
+/* =========================================
+   12. アクセス
+   ========================================= */
+.access {
+  padding-block: var(--space-2xl);
+}
+
+.access__list {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.access__row {
+  display: flex;
+  gap: var(--space-lg);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid #EDE4D8;
+}
+
+.access__row dt {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-wood);
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.access__row dd {
+  margin: 0;
+}
+
+/* =========================================
+
+   13. フッター
+   ========================================= */
+.footer {
+  background: var(--color-wood);
+  color: var(--color-white);
+  padding-block: var(--space-xl);
+  text-align: center;
+}
+
+.footer__logo {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer__text {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-block: var(--space-sm) var(--space-lg);
+}
+
+.footer__copyright {
+  font-size: 12px;
+  opacity: 0.6;
+}
+/* =========================================
+   14. ハンバーガーボタン
+   ========================================= */
+.hamburger {
+  display: none;
+  width: 32px;
+  height: 24px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 30;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-wood);
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 11px; }
+.hamburger span:nth-child(3) { bottom: 0; }
+
+.hamburger.is-open span:nth-child(1) {
+  top: 11px;
+  transform: rotate(45deg);
+
+}
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open span:nth-child(3) {
+  bottom: 11px;
+  transform: rotate(-45deg);
+}
+
+/* =========================================
+   15. スマホ対応
+   ========================================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 0;
+    background: var(--color-base);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 20;
+  }
+
+  .nav.is-open {
+    opacity: 1;
+    visibility: visible;
+
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: var(--space-lg);
+    font-size: 18px;
+    text-align: center;
+  }
+}
+body.is-fixed {
+  overflow: hidden;
+}
+/* =========================================
+   16. 画像
+   ========================================= */
+.hero {
+  background-image: linear-gradient(
+      rgba(255, 253, 247, 0.82),
+      rgba(255, 253, 247, 0.82)
+    ),
+    url("../images/hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.concept__image {
+  width: 100%;
+  max-width: 880px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin: var(--space-xl) auto 0;
+}
+/* =========================================
+   17. 下層ページ共通
+   ========================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 80px;
+}
+
+.nav__list a.is-current {
+  color: var(--color-primary);
+}
+
+.page-header {
+  background: var(--color-white);
+  padding-block: var(--space-xl);
+  text-align: center;
+}
+
+.page-header__title {
+  font-size: clamp(28px, 5vw, 44px);
+  margin-top: var(--space-sm);
+}
+
+.page-header__text {
+  color: var(--color-gray);
+  font-size: 14px;
+  margin-top: var(--space-md);
+}
+
+
+.breadcrumb {
+  padding-block: var(--space-md);
+  font-size: 12px;
+  color: var(--color-gray);
+}
+
+.breadcrumb__list {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.breadcrumb__item + .breadcrumb__item::before {
+  content: "／";
+  margin-right: var(--space-sm);
+}
+
+.breadcrumb__item a:hover {
+  color: var(--color-primary);
+}
+
+/* =========================================
+   18. メニューページ
+   ========================================= */
+.menu-page {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+
+.category-nav {
+  margin-block: var(--space-2xl) var(--space-xl);
+}
+
+.category-nav__list {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+.category-nav__link {
+  display: inline-block;
+  background: var(--color-white);
+  border: 1px solid #ede4d8;
+  border-radius: 999px;
+  padding: var(--space-sm) var(--space-lg);
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.category-nav__link:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.menu-category {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.menu-category + .menu-category {
+  margin-top: var(--space-2xl);
+}
+
+.menu-category__title {
+  font-size: 24px;
+
+  text-align: center;
+  color: var(--color-wood);
+  margin-bottom: var(--space-lg);
+}
+
+.menu-item {
+  border-bottom: 1px solid #ede4d8;
+  padding-block: var(--space-md);
+}
+
+.menu-item__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.menu-item__name {
+  font-size: 18px;
+}
+
+.menu-item__price {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-wood);
+  flex-shrink: 0;
+}
+
+.menu-item__text {
+  font-size: 14px;
+  color: var(--color-gray);
+  margin-top: var(--space-sm);
+
+}
+
+.menu-note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-gray);
+  margin-top: var(--space-2xl);
+}
+/* =========================================
+   19. お店についてページ
+   ========================================= */
+.about {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+
+.about-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about-story + .about-story {
+  margin-top: var(--space-2xl);
+}
+
+.about-story--reverse .about-story__image {
+  order: 2;
+}
+
+.about-story__image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.about-story__title {
+  font-size: clamp(20px, 3vw, 28px);
+  margin-bottom: var(--space-md);
+
+}
+
+.about-story__text {
+  color: var(--color-gray);
+  font-size: 15px;
+}
+
+.about-story__text + .about-story__text {
+  margin-top: var(--space-md);
+}
+
+.about-points {
+  margin-top: var(--space-2xl);
+}
+
+.about-points__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+}
+
+.about-point {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+}
+
+.about-point__number {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--color-primary);
+
+  line-height: 1;
+}
+
+.about-point__title {
+  font-size: 18px;
+  margin-block: var(--space-md) var(--space-sm);
+}
+
+.about-point__text {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.about-cta {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  .about-story {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .about-story--reverse .about-story__image {
+    order: 0;
+  }
+}
+/* =========================================
+   20. お知らせページ
+   ========================================= */
+.news-page {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+
+.news-archive {
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.news-archive__item + .news-archive__item {
+  margin-top: var(--space-md);
+}
+
+.news-archive__link {
+  display: block;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+  transition: transform 0.3s;
+}
+
+.news-archive__link:hover {
+  transform: translateY(-4px);
+}
+
+.news-archive__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+
+}
+
+.news-archive__date {
+  font-family: var(--font-heading);
+  font-size: 14px;
+  color: var(--color-wood);
+}
+
+.news-archive__category {
+  background: var(--color-primary);
+  border-radius: 999px;
+  padding: 2px var(--space-md);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.news-archive__title {
+  font-size: 18px;
+  margin-block: var(--space-sm);
+}
+
+.news-archive__link:hover .news-archive__title {
+  color: var(--color-primary);
+}
+
+.news-archive__text {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.pagination {
+  margin-top: var(--space-xl);
+
+}
+
+.pagination__list {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.pagination__item {
+  display: grid;
+  place-items: center;
+  min-width: 40px;
+  height: 40px;
+  padding-inline: var(--space-md);
+  background: var(--color-white);
+  border: 1px solid #ede4d8;
+  border-radius: 999px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+a.pagination__item:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.pagination__item.is-current {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  font-weight: 700;
+}
+/* =========================================
+   21. アクセスページ
+   ========================================= */
+.access-page {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+
+.access-map {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 7;
+  background: var(--color-white);
+  border: 1px dashed #ede4d8;
+  border-radius: var(--radius);
+}
+
+.access-map__note {
+  text-align: center;
+  color: var(--color-gray);
+  font-size: 14px;
+}
+
+.access-map__sub {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.access-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+
+}
+
+.access-info__title {
+  font-size: 22px;
+  color: var(--color-wood);
+  margin-bottom: var(--space-md);
+}
+
+.access-info .access__list {
+  max-width: none;
+}
+
+.access-route__item + .access-route__item {
+  margin-top: var(--space-lg);
+}
+
+.access-route__title {
+  font-size: 16px;
+  margin-bottom: var(--space-sm);
+}
+
+.access-route__text {
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.access-notice {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+
+.access-notice__title {
+  font-size: 18px;
+  margin-bottom: var(--space-md);
+}
+
+.access-notice__list li {
+  font-size: 14px;
+  color: var(--color-gray);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.access-notice__list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .access-info {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .access-map {
+    aspect-ratio: 4 / 3;
+  }
+}
+/* =========================================
+   22. トップの「もっと見る」
+   ========================================= */
+.concept__more,
+.news__more,
+.access__more {
+  text-align: center;
+  margin-top: var(--space-xl);
+}
