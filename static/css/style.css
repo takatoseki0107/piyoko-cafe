@@ -877,3 +877,13 @@ a.pagination__item:hover {
   text-align: center;
   margin-top: var(--space-xl);
 }
+/* =========================================
+   23. 固定ページ本文
+   ========================================= */
+.page-content {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+
+.page-content > .container > * + * {
+  margin-top: var(--space-md);
+}
