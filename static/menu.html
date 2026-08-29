@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>メニュー｜ぴよこcafe</title>
+    <meta
+      name="description"
+      content="ぴよこcafeのメニュー一覧。たまごサンド、エッグベネディクト、とろけるプリンなど、朝どれのたまごを使った料理とドリンクをご紹介します。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="header__logo" href="index.html">ぴよこcafe</a>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav__list">
+            <li><a href="about.html">お店について</a></li>
+            <li><a class="is-current" href="menu.html">メニュー</a></li>
+            <li><a href="news.html">お知らせ</a></li>
+            <li><a href="access.html">アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <p class="section__label">MENU</p>
+          <h1 class="page-header__title">メニュー</h1>
+          <p class="page-header__text">
+            すぐ近くの養鶏場から届く、朝どれのたまごを使っています。
+          </p>
+        </div>
+      </section>
+
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="index.html">ホーム</a></li>
+            <li class="breadcrumb__item" aria-current="page">メニュー</li>
+          </ol>
+        </div>
+      </nav>
+
+      <section class="menu-page">
+        <div class="container">
+          <ul class="menu__list">
+            <li class="card">
+              <img
+                class="card__image"
+                src="images/menu-sandwich.png"
+                alt="厚焼きたまごサンド"
+                loading="lazy"
+              />
+              <div class="card__body">
+                <h2 class="card__title">たまごサンド</h2>
+                <p class="card__text">
+                  ふわふわの厚焼きたまごを、耳を落とした食パンではさみました。
+                </p>
+                <p class="card__price">¥880</p>
+              </div>
+            </li>
+
+            <li class="card">
+              <img
+                class="card__image"
+                src="images/menu-benedict.png"
+                alt="エッグベネディクト"
+                loading="lazy"
+              />
+              <div class="card__body">
+                <h2 class="card__title">エッグベネディクト</h2>
+                <p class="card__text">
+                  とろりと流れる黄身と自家製オランデーズソース。看板メニューです。
+                </p>
+
+                <p class="card__price">¥1,320</p>
+              </div>
+            </li>
+
+            <li class="card">
+              <img
+                class="card__image"
+                src="images/menu-pudding.png"
+                alt="とろけるプリン"
+                loading="lazy"
+              />
+              <div class="card__body">
+                <h2 class="card__title">とろけるプリン</h2>
+                <p class="card__text">
+                  たまごの味がしっかり残る、昔ながらのかたさのプリン。
+                </p>
+                <p class="card__price">¥550</p>
+              </div>
+            </li>
+          </ul>
+
+          <nav class="category-nav" aria-label="カテゴリ">
+            <ul class="category-nav__list">
+              <li>
+                <a class="category-nav__link" href="#sandwich">サンドイッチ</a>
+              </li>
+              <li><a class="category-nav__link" href="#plate">プレート</a></li>
+              <li><a class="category-nav__link" href="#sweets">スイーツ</a></li>
+              <li><a class="category-nav__link" href="#drink">ドリンク</a></li>
+            </ul>
+          </nav>
+
+          <section class="menu-category" id="sandwich">
+            <h2 class="menu-category__title">サンドイッチ</h2>
+            <ul class="menu-items">
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">たまごサンド</h3>
+                  <p class="menu-item__price">¥880</p>
+                </div>
+                <p class="menu-item__text">
+                  ふわふわの厚焼きたまごを、耳を落とした食パンではさみました。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">ホットたまごサンド</h3>
+                  <p class="menu-item__price">¥980</p>
+                </div>
+                <p class="menu-item__text">
+                  チーズを重ねて、鉄板でこんがり焼き上げました。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">たまごとハムのサンド</h3>
+                  <p class="menu-item__price">¥950</p>
+                </div>
+                <p class="menu-item__text">
+                  刻んだゆでたまごと、厚切りハム。定番の組み合わせです。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">BLTたまごサンド</h3>
+                  <p class="menu-item__price">¥1,080</p>
+                </div>
+                <p class="menu-item__text">
+                  ベーコンとレタス、トマト。いちばんボリュームがあります。
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="plate">
+            <h2 class="menu-category__title">プレート</h2>
+            <ul class="menu-items">
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">エッグベネディクト</h3>
+                  <p class="menu-item__price">¥1,320</p>
+                </div>
+                <p class="menu-item__text">
+                  とろりと流れる黄身と自家製オランデーズソース。看板メニューです。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">山のオムライス</h3>
+                  <p class="menu-item__price">¥1,280</p>
+                </div>
+                <p class="menu-item__text">
+                  たまご3個を使った、ナイフを入れるとひらくタイプです。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">だし巻きたまご定食</h3>
+                  <p class="menu-item__price">¥1,180</p>
+                </div>
+                <p class="menu-item__text">
+                  ごはん、味噌汁、小鉢つき。だしは毎朝引いています。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">ぴよこモーニングプレート</h3>
+                  <p class="menu-item__price">¥980</p>
+                </div>
+                <p class="menu-item__text">
+                  9:00〜11:00限定。トースト、目玉焼き、サラダ、ドリンク付き。
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="sweets">
+            <h2 class="menu-category__title">スイーツ</h2>
+            <ul class="menu-items">
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">とろけるプリン</h3>
+                  <p class="menu-item__price">¥550</p>
+                </div>
+                <p class="menu-item__text">
+                  たまごの味がしっかり残る、昔ながらのかたさのプリン。
+                </p>
+              </li>
+
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">レモンプリン</h3>
+                  <p class="menu-item__price">¥600</p>
+                </div>
+                <p class="menu-item__text">
+                  夏季限定。となりの畑のレモンを使ったさっぱり味です。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">たまごのシフォンケーキ</h3>
+                  <p class="menu-item__price">¥620</p>
+                </div>
+                <p class="menu-item__text">
+                  ホイップクリーム添え。焼きたての日は売り切れます。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">カスタードどら焼き</h3>
+                  <p class="menu-item__price">¥480</p>
+                </div>
+                <p class="menu-item__text">
+                  古民家に合う和のおやつ。おみやげにもどうぞ。
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <section class="menu-category" id="drink">
+            <h2 class="menu-category__title">ドリンク</h2>
+
+            <ul class="menu-items">
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">森のブレンドコーヒー</h3>
+                  <p class="menu-item__price">¥480</p>
+                </div>
+                <p class="menu-item__text">
+                  深煎り。となり町の焙煎所にお願いしているオリジナルです。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">たまごミルクセーキ</h3>
+                  <p class="menu-item__price">¥580</p>
+                </div>
+                <p class="menu-item__text">
+                  たまご、牛乳、はちみつだけ。昔の喫茶店の味です。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">自家製レモンスカッシュ</h3>
+                  <p class="menu-item__price">¥520</p>
+                </div>
+                <p class="menu-item__text">
+                  歩いてきたあとの一杯に。氷たっぷりでお出しします。
+                </p>
+              </li>
+              <li class="menu-item">
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">ほうじ茶ラテ</h3>
+                  <p class="menu-item__price">¥550</p>
+                </div>
+                <p class="menu-item__text">
+                  香ばしいほうじ茶と、あたたかいミルク。
+                </p>
+              </li>
+            </ul>
+          </section>
+
+          <p class="menu-note">
+            表示価格はすべて税込です。<br />
+            仕入れの状況により、メニューが変わることがあります。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__logo">ぴよこcafe</p>
+        <p class="footer__text">山の古民家で、たまご料理を。</p>
+        <p class="footer__copyright">&copy; 2026 piyoko cafe</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.getElementById("nav");
+
+      const toggleNav = () => {
+        hamburger.classList.toggle("is-open");
+        nav.classList.toggle("is-open");
+        document.body.classList.toggle("is-fixed");
+
+        const isOpen = hamburger.classList.contains("is-open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+      };
+
+      hamburger.addEventListener("click", toggleNav);
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (nav.classList.contains("is-open")) {
+            toggleNav();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

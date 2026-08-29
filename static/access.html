@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>アクセス｜ぴよこcafe</title>
+    <meta
+      name="description"
+      content="ぴよこcafeへの行き方、営業時間、駐車場についてのご案内です。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="header__logo" href="index.html">ぴよこcafe</a>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="nav" id="nav">
+          <ul class="nav__list">
+            <li><a href="about.html">お店について</a></li>
+            <li><a href="menu.html">メニュー</a></li>
+            <li><a href="news.html">お知らせ</a></li>
+            <li><a class="is-current" href="access.html">アクセス</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-header">
+        <div class="container">
+          <p class="section__label">ACCESS</p>
+          <h1 class="page-header__title">アクセス</h1>
+          <p class="page-header__text">
+            山道を少し登ります。時間に余裕をもってお越しください。
+          </p>
+        </div>
+      </section>
+
+      <nav class="breadcrumb" aria-label="パンくずリスト">
+        <div class="container">
+          <ol class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="index.html">ホーム</a></li>
+            <li class="breadcrumb__item" aria-current="page">アクセス</li>
+          </ol>
+        </div>
+      </nav>
+
+      <section class="access-page">
+        <div class="container">
+          <div class="access-map">
+            <p class="access-map__note">
+              地図はこちらに表示されます<br />
+              <span class="access-map__sub"
+                >（Googleマップを埋め込み予定）</span
+              >
+            </p>
+          </div>
+
+          <div class="access-info">
+            <div class="access-info__col">
+              <h2 class="access-info__title">店舗情報</h2>
+              <dl class="access__list">
+                <div class="access__row">
+                  <dt>店名</dt>
+                  <dd>ぴよこcafe</dd>
+                </div>
+                <div class="access__row">
+                  <dt>住所</dt>
+                  <dd>〒000-0000<br />神奈川県横浜市○○区山の上1-2-3</dd>
+                </div>
+                <div class="access__row">
+                  <dt>電話</dt>
+                  <dd>000-0000-0000</dd>
+                </div>
+                <div class="access__row">
+                  <dt>営業時間</dt>
+                  <dd>9:00 - 17:00<br />（ラストオーダー 16:30）</dd>
+                </div>
+                <div class="access__row">
+                  <dt>定休日</dt>
+
+                  <dd>火曜日・水曜日</dd>
+                </div>
+                <div class="access__row">
+                  <dt>席数</dt>
+                  <dd>店内14席／テラス4席</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="access-info__col">
+              <h2 class="access-info__title">行き方</h2>
+              <ul class="access-route">
+                <li class="access-route__item">
+                  <h3 class="access-route__title">バスでお越しの方</h3>
+                  <p class="access-route__text">
+                    ○○駅の東口から「山の上」行きのバスで15分。
+                    「山の上」で降りて、坂を上って徒歩5分です。
+                    バスは1時間に1本なので、時刻表をご確認ください。
+                  </p>
+                </li>
+                <li class="access-route__item">
+                  <h3 class="access-route__title">お車でお越しの方</h3>
+                  <p class="access-route__text">
+                    ○○インターから20分。
+                    最後の500mほどは道幅が狭く、すれ違いが難しい箇所があります。
+                    ゆっくりお越しください。
+                  </p>
+                </li>
+                <li class="access-route__item">
+                  <h3 class="access-route__title">駐車場</h3>
+                  <p class="access-route__text">
+                    店舗の前に5台ぶんご用意しています。
+                    満車の場合は、50mほど手前の空き地もお使いいただけます。
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="access-notice">
+            <h2 class="access-notice__title">お越しになる前に</h2>
+            <ul class="access-notice__list">
+              <li>雪の日は臨時休業することがあります。</li>
+              <li>たまごが売り切れ次第、早めに閉めることがあります。</li>
+              <li>ご予約は承っておりません。順番にご案内しています。</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__logo">ぴよこcafe</p>
+        <p class="footer__text">山の古民家で、たまご料理を。</p>
+        <p class="footer__copyright">&copy; 2026 piyoko cafe</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.getElementById("nav");
+
+      const toggleNav = () => {
+        hamburger.classList.toggle("is-open");
+        nav.classList.toggle("is-open");
+        document.body.classList.toggle("is-fixed");
+        const isOpen = hamburger.classList.contains("is-open");
+        hamburger.setAttribute("aria-expanded", isOpen);
+      };
+
+      hamburger.addEventListener("click", toggleNav);
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          if (nav.classList.contains("is-open")) {
+            toggleNav();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
