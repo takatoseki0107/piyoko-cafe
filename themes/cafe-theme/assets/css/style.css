@@ -428,7 +428,7 @@ body.is-fixed {
       rgba(255, 253, 247, 0.82),
       rgba(255, 253, 247, 0.82)
     ),
-    url("../images/hero.png");
+    url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -904,4 +904,71 @@ a.pagination__item:hover {
 
 .menu-item__name a:hover {
   color: var(--color-primary);
+}
+/* =========================================
+   25. メニュー個別ページ
+   ========================================= */
+.menu-single {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+
+.menu-single__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: start;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.menu-single__image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.menu-single__price {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-wood);
+  line-height: 1;
+}
+
+.menu-single__tax {
+
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray);
+}
+
+.menu-single__text {
+  margin-top: var(--space-lg);
+  color: var(--color-gray);
+}
+
+.menu-single__category {
+  margin-top: var(--space-lg);
+  font-size: 14px;
+  color: var(--color-gray);
+}
+
+.menu-single__category a {
+  color: var(--color-wood);
+  text-decoration: underline;
+}
+
+.menu-single__back {
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
+@media (max-width: 768px) {
+  .menu-single__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
 }

@@ -428,7 +428,7 @@ body.is-fixed {
       rgba(255, 253, 247, 0.82),
       rgba(255, 253, 247, 0.82)
     ),
-    url("../images/hero.png");
+    url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
 }

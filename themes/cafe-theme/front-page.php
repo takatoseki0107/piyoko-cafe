@@ -33,7 +33,7 @@ get_header();
 
 		<img
 			class="concept__image"
-			src="<?php echo esc_url( get_theme_file_uri( '/assets/images/exterior.png' ) ); ?>"
+			src="<?php echo esc_url( get_theme_file_uri( '/assets/images/exterior.jpg' ) ); ?>"
 			alt="山の中にあるぴよこcafeの外観"
 			loading="lazy"
 		/>
@@ -49,7 +49,7 @@ get_header();
 			<li class="card">
 				<img
 					class="card__image"
-					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-sandwich.png' ) ); ?>"
+					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-sandwich.jpg' ) ); ?>"
 					alt="厚焼きたまごサンド"
 					loading="lazy"
 				/>
@@ -66,7 +66,7 @@ get_header();
 
 				<img
 					class="card__image"
-					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-benedict.png' ) ); ?>"
+					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-benedict.jpg' ) ); ?>"
 					alt="エッグベネディクト"
 					loading="lazy"
 				/>
@@ -82,7 +82,7 @@ get_header();
 			<li class="card">
 				<img
 					class="card__image"
-					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-pudding.png' ) ); ?>"
+					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-pudding.jpg' ) ); ?>"
 					alt="とろけるプリン"
 					loading="lazy"
 				/>
