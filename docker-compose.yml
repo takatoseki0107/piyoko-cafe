@@ -30,8 +30,8 @@ services:
         define('WP_DEBUG_DISPLAY', true);
     volumes:
       - ./themes/cafe-theme:/var/www/html/wp-content/themes/cafe-theme
+      - ./themes/cafe-theme-sakura:/var/www/html/wp-content/themes/cafe-theme-sakura
       - wp_data:/var/www/html
-
 volumes:
   db_data:
   wp_data:

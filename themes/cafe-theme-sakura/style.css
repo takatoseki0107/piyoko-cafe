@@ -1,0 +1,44 @@
+/*
+Theme Name: ぴよこcafe 桜
+Theme URI: https://github.com/takatoseki0107/piyoko-cafe
+Description: ぴよこcafe テーマの子テーマ。春季限定の配色に切り替えます。
+Author: Takato Seki
+Template: cafe-theme
+Version: 1.0.0
+Text Domain: cafe-theme-sakura
+*/
+
+/* =========================================
+   桜バージョンの上書き
+   ========================================= */
+:root {
+  --color-primary: #F2A7C3;
+  --color-base:    #FFFAFB;
+  --color-wood:    #8A6068;
+  --color-text:    #3E2C30;
+  --color-gray:    #7A6A6E;
+}
+
+/* ヒーローのオーバーレイを桜色に */
+.hero {
+  background-image: linear-gradient(
+      rgba(255, 250, 251, 0.86),
+      rgba(255, 250, 251, 0.86)
+    ),
+    url("../cafe-theme/assets/images/hero.jpg");
+}
+
+/* 区切り線の色を合わせる */
+.news__item,
+
+.access__row,
+.menu-item,
+.news-archive__item {
+  border-color: #F0E0E4;
+}
+
+.category-nav__link,
+.pagination__item,
+.access-map {
+  border-color: #F0E0E4;
+}
