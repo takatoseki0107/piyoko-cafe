@@ -148,3 +148,12 @@ function piyoko_save_price( $post_id ) {
 }
 
 add_action( 'save_post_menu', 'piyoko_save_price' );
+
+/**
+ * ブロックエディタにテーマのCSSを読み込む
+ */
+function piyoko_editor_styles() {
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'assets/css/style.css' );
+}
+add_action( 'after_setup_theme', 'piyoko_editor_styles' );
