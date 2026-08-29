@@ -1,0 +1,155 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"settings": {
+		"appearanceTools": true,
+		"layout": {
+			"contentSize": "720px",
+			"wideSize": "1120px"
+		},
+		"color": {
+			"custom": false,
+			"customGradient": false,
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#F2B705",
+					"name": "たまご（黄）"
+				},
+				{
+					"slug": "wood",
+					"color": "#8A6240",
+					"name": "木（茶）"
+				},
+				{
+					"slug": "text",
+					"color": "#3E2C1C",
+					"name": "文字"
+				},
+				{
+					"slug": "gray",
+
+					"color": "#7A6A5C",
+					"name": "グレー"
+				},
+				{
+					"slug": "base",
+					"color": "#FFFDF7",
+					"name": "背景"
+				},
+				{
+					"slug": "white",
+					"color": "#FFFFFF",
+					"name": "白"
+				}
+			]
+		},
+		"typography": {
+			"customFontSize": false,
+			"dropCap": false,
+			"fontFamilies": [
+				{
+					"slug": "heading",
+					"name": "見出し（Zen Maru Gothic）",
+					"fontFamily": "\"Zen Maru Gothic\", sans-serif"
+				},
+				{
+					"slug": "body",
+					"name": "本文（Noto Sans JP）",
+					"fontFamily": "\"Noto Sans JP\", sans-serif"
+				}
+			],
+			"fontSizes": [
+				{
+
+					"slug": "small",
+					"size": "14px",
+					"name": "小"
+				},
+				{
+					"slug": "medium",
+					"size": "16px",
+					"name": "標準"
+				},
+				{
+					"slug": "large",
+					"size": "20px",
+					"name": "大"
+				},
+				{
+					"slug": "x-large",
+					"size": "28px",
+					"name": "特大"
+				}
+			]
+		},
+		"spacing": {
+			"customSpacingSize": false,
+			"units": [ "px", "rem" ],
+			"spacingSizes": [
+				{
+					"slug": "20",
+					"size": "8px",
+					"name": "1"
+				},
+				{
+					"slug": "30",
+
+					"size": "16px",
+					"name": "2"
+				},
+				{
+					"slug": "40",
+					"size": "32px",
+					"name": "3"
+				},
+				{
+					"slug": "50",
+					"size": "64px",
+					"name": "4"
+				},
+				{
+					"slug": "60",
+					"size": "120px",
+					"name": "5"
+				}
+			]
+		}
+	},
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--text)"
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--body)",
+			"fontSize": "16px",
+			"lineHeight": "1.8"
+		},
+		"elements": {
+
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--wood)"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--heading)"
+				}
+			}
+		}
+	}
+}
