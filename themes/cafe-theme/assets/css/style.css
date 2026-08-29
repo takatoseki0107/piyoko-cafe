@@ -887,3 +887,21 @@ a.pagination__item:hover {
 .page-content > .container > * + * {
   margin-top: var(--space-md);
 }
+/* =========================================
+   24. メニューアーカイブの調整
+   ========================================= */
+.menu-category + .menu-category {
+  margin-top: var(--space-xl);
+}
+
+.menu-items {
+  margin: 0;
+}
+
+.menu-item__name a {
+  transition: color 0.3s;
+}
+
+.menu-item__name a:hover {
+  color: var(--color-primary);
+}

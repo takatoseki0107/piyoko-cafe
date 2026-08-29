@@ -35,8 +35,9 @@ get_header();
 		$categories = get_terms( array(
 			'taxonomy'   => 'menu_category',
 			'hide_empty' => true,
-		) );
-		?>
+			'slug'       => array( 'sandwich', 'plate', 'sweets', 'drink' ),
+			'orderby'    => 'slug__in',
+		) );		?>
 
 		<?php if ( ! empty( $categories ) && ! is_wp_error( $categories ) ) : ?>
 			<nav class="category-nav" aria-label="カテゴリー">
