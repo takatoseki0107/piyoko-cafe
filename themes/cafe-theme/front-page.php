@@ -103,6 +103,7 @@ get_header();
 		<?php wp_reset_postdata(); ?>
 	</div>
 </section>
+
 <section class="news" id="news">
 	<div class="container">
 		<p class="section__label">NEWS</p>
