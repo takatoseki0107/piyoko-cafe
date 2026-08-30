@@ -45,60 +45,64 @@ get_header();
 		<p class="section__label">MENU</p>
 		<h2 class="section__title">おすすめメニュー</h2>
 
-		<ul class="menu__list">
-			<li class="card">
-				<img
-					class="card__image"
-					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-sandwich.jpg' ) ); ?>"
-					alt="厚焼きたまごサンド"
-					loading="lazy"
-				/>
-				<div class="card__body">
-					<h3 class="card__title">たまごサンド</h3>
-					<p class="card__text">
-						ふわふわの厚焼きたまごを、耳を落とした食パンではさみました。
-					</p>
-					<p class="card__price">¥880</p>
-				</div>
-			</li>
+		<?php
+		$menu_query = new WP_Query( array(
+			'post_type'      => 'menu',
+			'posts_per_page' => 3,
+			'orderby'        => 'date',
+			'order'          => 'ASC',
+		) );
+		?>
 
-			<li class="card">
+		<?php if ( $menu_query->have_posts() ) : ?>
+			<ul class="menu__list">
+				<?php while ( $menu_query->have_posts() ) : $menu_query->the_post(); ?>
+					<?php $price = get_post_meta( get_the_ID(), '_piyoko_price', true ); ?>
+					<li class="card">
+						<a href="<?php the_permalink(); ?>">
+							<?php if ( has_post_thumbnail() ) : ?>
+								<?php the_post_thumbnail( 'medium_large', array(
+									'class'   => 'card__image',
+									'loading' => 'lazy',
+								) ); ?>
+							<?php else : ?>
+								<img
+									class="card__image"
+									src="<?php echo esc_url( get_theme_file_uri( '/assets/images/no-image.jpg' ) ); ?>"
+									alt=""
+									loading="lazy"
+								/>
 
-				<img
-					class="card__image"
-					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-benedict.jpg' ) ); ?>"
-					alt="エッグベネディクト"
-					loading="lazy"
-				/>
-				<div class="card__body">
-					<h3 class="card__title">エッグベネディクト</h3>
-					<p class="card__text">
-						とろりと流れる黄身と自家製オランデーズソース。看板メニューです。
-					</p>
-					<p class="card__price">¥1,320</p>
-				</div>
-			</li>
+							<?php endif; ?>
 
-			<li class="card">
-				<img
-					class="card__image"
-					src="<?php echo esc_url( get_theme_file_uri( '/assets/images/menu-pudding.jpg' ) ); ?>"
-					alt="とろけるプリン"
-					loading="lazy"
-				/>
-				<div class="card__body">
-					<h3 class="card__title">とろけるプリン</h3>
-					<p class="card__text">
-						たまごの味がしっかり残る、昔ながらのかたさのプリン。
-					</p>
-					<p class="card__price">¥550</p>
-				</div>
-			</li>
-		</ul>
+							<div class="card__body">
+								<h3 class="card__title"><?php the_title(); ?></h3>
+								<?php if ( get_the_excerpt() ) : ?>
+									<p class="card__text"><?php echo esc_html( get_the_excerpt() ); ?></p>
+								<?php endif; ?>
+								<?php if ( $price ) : ?>
+									<p class="card__price">
+										&yen;<?php echo esc_html( number_format( $price ) ); ?>
+									</p>
+								<?php endif; ?>
+							</div>
+						</a>
+					</li>
+				<?php endwhile; ?>
+			</ul>
+
+			<div class="menu__more">
+				<a class="button" href="<?php echo esc_url( get_post_type_archive_link( 'menu' ) ); ?>">
+					メニューをすべて見る
+				</a>
+			</div>
+		<?php else : ?>
+			<p class="concept__text">メニューはまだ登録されていません。</p>
+		<?php endif; ?>
+
+		<?php wp_reset_postdata(); ?>
 	</div>
-
 </section>
-
 <section class="news" id="news">
 	<div class="container">
 		<p class="section__label">NEWS</p>
