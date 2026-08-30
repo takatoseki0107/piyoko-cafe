@@ -13,6 +13,46 @@
 
 ---
 
+## スクリーンショット
+
+### トップページ
+
+![トップページ](docs/screenshots/top.png)
+
+### メニュー一覧
+
+カスタム投稿タイプで登録した商品を、カテゴリー別に表示しています。
+
+![メニュー一覧](docs/screenshots/menu-archive.png)
+
+### メニュー詳細
+
+![メニュー詳細](docs/screenshots/menu-single.png)
+
+### お知らせ一覧
+
+![お知らせ一覧](docs/screenshots/news.png)
+
+### 管理画面（カスタム投稿タイプ）
+
+タクソノミーによるカテゴリー分類と、カスタムフィールドで実装した価格入力欄です。
+
+![管理画面](docs/screenshots/admin-cpt.png)
+
+### ブロックエディタのカラーパレット
+
+theme.json で定義した6色のみが選択でき、WordPress既定の色とカラーピッカーは無効化しています。
+
+![カラーパレット](docs/screenshots/editor-palette.png)
+
+### 子テーマ（ぴよこcafe 桜）
+
+CSS変数の再定義のみで配色を切り替えています。テンプレートファイルは複製していません。
+
+![子テーマ](docs/screenshots/child-theme.png)
+
+---
+
 ## デザインルール
 
 | 項目 | 内容 |
@@ -126,7 +166,6 @@ if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
 
 ### なぜ theme.json で選択肢を絞るか
 
-
 ブロックエディタは自由度が高い反面、クライアントが自由に色を選べる状態だとデザインが崩れます。パレットを6色に固定し、カラーピッカーを無効化することで、**誰が編集してもトンマナが保たれる**状態を作りました。デザインシステムをコードで担保する考え方です。
 
 ### なぜ投稿タイプのスラッグを `menu-item` にしたか
@@ -159,7 +198,6 @@ if ( ! current_user_can( 'edit_post', $post_id ) ) { return; }
 
 ### ④ ファイルの配置ミスでテンプレートが認識されない
 
-
 新規作成したテンプレートファイルが1階層上に置かれており、WordPressに認識されないことが複数回ありました。ファイル名のタイプミス（`single-manu.php`）でも同様の症状が出ます。
 
 WordPressはファイル名と配置場所でテンプレートを判別するため、「画面が変わらない = ファイルが読まれていない」と切り分ける習慣がつきました。作成後に `ls` で確認する運用に変えています。
@@ -189,6 +227,7 @@ PRには変更内容・意図・今後の課題を記載しています。実際
 ```
 piyoko-cafe/
 ├── docker-compose.yml           # WordPress + MySQL
+├── docs/screenshots/            # READMEに掲載しているスクリーンショット
 ├── static/                      # テーマ化前の静的HTML
 │   ├── index.html
 │   ├── menu.html / about.html / news.html / access.html
